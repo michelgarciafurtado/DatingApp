@@ -6,5 +6,5 @@ namespace API.Data;
 
 public class AppDbContext(DbContextOptions options) : DbContext(options)
 {
-    DbSet<AppUser> Users { get; set; }
+    public DbSet<AppUser> Users { get; set; }
 }

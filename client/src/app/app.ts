@@ -16,7 +16,7 @@ export class App implements OnInit{
   protected members = signal<any>([]);
   
     async ngOnInit(){
-    this.members.set(await this.getMembers());
+      this.members.set(await this.getMembers());
     }
   
   async getMembers(){
@@ -24,6 +24,7 @@ export class App implements OnInit{
       return lastValueFrom(this.http.get('https://localhost:5001/Api/AppUser'));
     } catch (error) {
       console.log(error);
+      throw error;
     }
     
   }

@@ -1,20 +1,32 @@
-<h2>{{title}}</h2>
 
-<table>
-    <thead>
-        <td>Id</td>
-        <td>Name</td>
-        <td>E-Mail</td>
-    </thead>
-    <tbody>
-        @for(member of members; track member.id)
+<div class="card bg-base-100 w-1/2 mx-auto p-10 mt-10 shadow-xl">
+    <div class="card-title"><h2 class="text-3xl text-red-500 font-bold">{{title}}</h2></div>
+   <div class="card-body">
+        <table class="table-auto">
+        <thead>
+            <td></td>
+            <td>Id</td>
+            <td>Name</td>
+            <td>E-Mail</td>
+            <td></td>
+        </thead>
+        <tbody>
+        @for(member of members(); track member.id)
         {
             <tr>
+            <td><img src="/user.png" class="size-12 rounded-box"></td>
             <td>{{member.id}}</td>
             <td>{{member.displayname}}</td>
             <td>{{member.email}}</td>
+            <td><button class="btn btn-primary">Button</button></td>
             </tr>
         }
         
-    </tbody>
-</table>
+        </tbody>
+    </table>
+   </div>
+    
+
+</div>
+
+<button class="btn btn-info">Button</button>

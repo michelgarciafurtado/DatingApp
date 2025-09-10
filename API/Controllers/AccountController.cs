@@ -33,6 +33,26 @@ namespace API.Controllers
             return user;
         }
 
+        [HttpPost("login")]
+        public async Task<ActionResult<AppUser>> Login([FromBody] LoginDto dto)
+        {
+            var user = await context.Users.FirstOrDefaultAsync(x => x.Email == dto.EMail);
+
+            if (user == null) return Unauthorized("Invalid E-mail Address!");
+
+            using var hmac = new HMACSHA512(user.PasswordSalt);
+
+            var ComputeHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(dto.Password));
+
+            for (var i = 0; i < ComputeHash.Length; i++)
+            {
+                if (ComputeHash[i] != user.Password[i]) return Unauthorized("Invalid password");
+            }
+
+            return user;
+        }
+
+
         private async Task<bool> VerifyEmail(string email)
         {
             return await context.Users.AnyAsync(x => x.Email.ToLower() == email.ToLower());

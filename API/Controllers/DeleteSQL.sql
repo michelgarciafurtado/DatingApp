@@ -1,0 +1,1 @@
+delete from Users where Email = "roland@email.comimy@email.com";

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\API.csproj": {}
+    "C:\\Users\\M GARCIA\\Documents\\DatingApp\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\API.csproj": {
+    "C:\\Users\\M GARCIA\\Documents\\DatingApp\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\API.csproj",
+        "projectPath": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\api\\API.csproj",
         "packagesPath": "C:\\Users\\M GARCIA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\obj\\",
+        "outputPath": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.5, )"
@@ -65,6 +69,14 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.14.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
             }
           },
           "imports": [

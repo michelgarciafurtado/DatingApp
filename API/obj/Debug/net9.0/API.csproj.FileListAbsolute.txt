@@ -303,3 +303,11 @@ C:\Users\MICHEL\Documents\ProjetosDotNetAngular\DatingApp\API\obj\Debug\net9.0\r
 C:\Users\MICHEL\Documents\ProjetosDotNetAngular\DatingApp\API\obj\Debug\net9.0\API.pdb
 C:\Users\MICHEL\Documents\ProjetosDotNetAngular\DatingApp\API\obj\Debug\net9.0\API.genruntimeconfig.cache
 C:\Users\MICHEL\Documents\ProjetosDotNetAngular\DatingApp\API\obj\Debug\net9.0\ref\API.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\M GARCIA\Documents\DatingApp\api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

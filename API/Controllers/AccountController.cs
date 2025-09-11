@@ -3,6 +3,8 @@ using System.Text;
 using API.Data;
 using API.DTO;
 using API.Entities;
+using API.Interfaces;
+using API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 namespace API.Controllers
 {
 
-    public class AccountController(AppDbContext context) : BaseApiController
+    public class AccountController(AppDbContext context, ITokenService tokenService) : BaseApiController
     {
         [HttpPost]
         public async Task<ActionResult<AppUser>> Register([FromBody] RegisterDto dto)
@@ -34,7 +36,7 @@ namespace API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<AppUser>> Login([FromBody] LoginDto dto)
+        public async Task<ActionResult<UserDto>> Login([FromBody] LoginDto dto)
         {
             var user = await context.Users.FirstOrDefaultAsync(x => x.Email == dto.EMail);
 
@@ -48,8 +50,15 @@ namespace API.Controllers
             {
                 if (ComputeHash[i] != user.Password[i]) return Unauthorized("Invalid password");
             }
+            var userdto = new UserDto
+            {
+                Email = user.Email,
+                Id = user.Id,
+                DisplayNme = user.Displayname,
+                Token = tokenService.CreateToken(user)
+            };
 
-            return user;
+            return userdto;
         }
 
 

@@ -38,8 +38,9 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login([FromBody] LoginDto dto)
         {
+            //busca no banco um email igual ao passado pelo loginDto
             var user = await context.Users.FirstOrDefaultAsync(x => x.Email == dto.EMail);
-
+            //se nao encontrou o usuario retorna nao autorizado
             if (user == null) return Unauthorized("Invalid E-mail Address!");
 
             using var hmac = new HMACSHA512(user.PasswordSalt);

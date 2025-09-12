@@ -27,6 +27,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     {
         var token = builder.Configuration["TokenKey"]
             ?? throw new Exception("Token not found - program.cs");
+            
+            //monta os parametros para comparar com o token que sera recebido
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,

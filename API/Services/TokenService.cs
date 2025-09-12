@@ -18,7 +18,7 @@ public class TokenService(IConfiguration config) : ITokenService
         if (token.Length < 64)
             throw new Exception("Your token key needs to be >= 64 characters");
         //install System.IdentityModel.Tokens.Jwt And microsoft.IdentityModel.Tokens
-        //transforma o token em um arrau de Bytes padrao UTF8
+        //transforma o token em um array de Bytes padrao UTF8
         var Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(token));
 
         //cria informações sobre o usuario
@@ -33,10 +33,10 @@ public class TokenService(IConfiguration config) : ITokenService
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.UtcNow.AddDays(7),
+            Expires = DateTime.UtcNow.AddMinutes(5),
             SigningCredentials = creds
         };
-
+        //monta o token com o tokenHandler 
         var tokenHandler = new JwtSecurityTokenHandler();
         var tokenKey = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(tokenKey);

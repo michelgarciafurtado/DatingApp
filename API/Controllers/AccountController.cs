@@ -3,6 +3,7 @@ using System.Text;
 using API.Data;
 using API.DTO;
 using API.Entities;
+using API.Extensions;
 using API.Interfaces;
 using API.Services;
 using Microsoft.AspNetCore.Http;
@@ -51,15 +52,9 @@ namespace API.Controllers
             {
                 if (ComputeHash[i] != user.Password[i]) return Unauthorized("Invalid password");
             }
-            var userdto = new UserDto
-            {
-                Email = user.Email,
-                Id = user.Id,
-                DisplayNme = user.Displayname,
-                Token = tokenService.CreateToken(user)
-            };
+            
 
-            return userdto;
+            return user.ToDto(tokenService);
         }
 
 

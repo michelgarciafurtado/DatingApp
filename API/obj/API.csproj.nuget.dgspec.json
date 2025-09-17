@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\M GARCIA\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\M GARCIA\\Documents\\DatingApp\\API\\obj\\",
+=======
+    "C:\\Users\\MICHEL\\Documents\\ProjetosDotNetAngular\\DatingApp\\DatingApp\\API\\API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\MICHEL\\Documents\\ProjetosDotNetAngular\\DatingApp\\DatingApp\\API\\API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MICHEL\\Documents\\ProjetosDotNetAngular\\DatingApp\\DatingApp\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\MICHEL\\Documents\\ProjetosDotNetAngular\\DatingApp\\DatingApp\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\MICHEL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MICHEL\\Documents\\ProjetosDotNetAngular\\DatingApp\\DatingApp\\API\\obj\\",
+>>>>>>> 625c16b7e2a49d88ce3b75013fbe59051db77403
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\M GARCIA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MICHEL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -98,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,6 +1,6 @@
 <header class="p-3 w-full fixed top-0 z-50 bg-gradient-to-r from-primary to-black">
     <div class="flex align-middle item-center px-10 mx-auto gap-6">
-       <a href="" class=" flex intems-center gap-3 max-h-16 text-white border-r-white border-r-r-2 pr-6">
+       <a class=" flex intems-center gap-3 max-h-16 text-white border-r-white border-r-r-2 pr-6">
         <h3>Dating App</h3> 
         
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -15,11 +15,16 @@
        </nav> 
 
        <div class="flex align-middle ml-auto gap-3">
-        <form class="flex items-center gap-3">
-            <input type="text" class="input" placeholder="Email">
-            <input type="text" class="input" placeholder="Password">
-            <button type="btn">login</button>
-
+        <form #loginForm="ngForm" (ngSubmit)="login()" class="flex items-center gap-3">
+            <input 
+                    [(ngModel)]="creds.email"
+                    name="email"
+                    type="text" class="input" placeholder="Email">
+            <input 
+             [(ngModel)]="creds.password"
+                    name="password"
+                    type="text" class="input" placeholder="Password">
+            <button class="btn">login</button>
         </form>
        </div>
     </div>

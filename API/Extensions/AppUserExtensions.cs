@@ -14,7 +14,7 @@ public static class AppUserExtensions
         {
             Email = user.Email,
             Id = user.Id,
-            DisplayNme = user.Displayname,
+            DisplayName = user.Displayname,
             Token = tokenService.CreateToken(user)
         };
     }

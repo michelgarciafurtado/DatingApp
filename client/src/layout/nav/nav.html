@@ -15,12 +15,12 @@
        </nav> 
 
        <div class="flex align-middle ml-auto gap-3">
-        @if(loggedIn()){
+        @if(accountService.currentUser(); as user){
           <div class="dropdown dropdown-end">
           <div tabindex="0" role="button"
             class="flex items-center text-amber-100 text-xl gap-3 cursor-pointer">
             <img src="/user.png" alt="user avatar" class="w-7 h-7 rounded-box">
-            <span>Menu</span>
+            <span>{{user.displayName}}</span>
           </div>
           <ul tabindex="0" class="dropdown-content  menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
             <li><a>profile</a></li>

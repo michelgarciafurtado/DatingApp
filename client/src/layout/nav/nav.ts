@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { AccountService } from '../../core/services/account-service';
 @Component({
@@ -10,11 +10,19 @@ import { AccountService } from '../../core/services/account-service';
 export class Nav {
   private accountService = inject(AccountService)
   protected creds: any = {}
-
+  protected loggedIn = signal(false)
   login(){
     this.accountService.login(this.creds).subscribe({
-      next: result => console.log(result),
+      next: result => {
+        console.log(result);
+        this.loggedIn.set(true);
+        this.creds = {};
+      },
       error: error => alert(error.message)
     })
+  }
+
+  logout(){
+    this.loggedIn.set(false);
   }
 }
